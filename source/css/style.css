@@ -1,0 +1,71 @@
+@font-face {
+    font-family: kanit;
+    src: url(../font/Kanit-Light.ttf);
+}
+body {
+    font-family: kanit;
+    background-color: #f1f1f1;
+    font-size: 15px;
+}
+.content {
+    background-color: white;
+    color: #757575;
+
+}
+.body-margin-top {
+    margin-top: 16px!important;
+}
+.body-center {
+    margin: auto;
+    max-width: 1400px;
+}
+.body-margin-bottom {
+    margin-bottom: 16px!important;
+}
+.grey-text {
+    color: #757575;
+}
+.box-shadow {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+.col-padding {
+    padding: 5 8px;
+}
+.background-green {
+    background-color: #009688!important;
+    color: white;
+}
+.text-green {
+    color:  #009688!important;
+}
+.text-light-green{
+    color: #2ABB9B!important;
+}
+.display-buttom-left {
+    position: absolute;
+    left: 0;
+    bottom : 0;
+}
+.padding {
+    padding:0.01em 16px;
+}
+.relative {
+    position:relative;
+}
+.black-text {
+    color: black!important;
+}
+p{
+    margin: 10px 0 10px;
+}
+.size18{
+    font-size: 18px;
+}
+.margin-right{
+    margin-right:16px;
+}
+hr{
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
