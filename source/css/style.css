@@ -71,12 +71,6 @@ hr{
     border-top: 1px solid #eee;
     margin: 20px 0;
 }
-.invisiblity-group{
-    color: #757575!important;
-    background-color: #fff!important;
-    cursor: pointer;
-    width: 100%;
-}
 #page_control{
     display: none;
 }
