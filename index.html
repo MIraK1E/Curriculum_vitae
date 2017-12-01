@@ -7,71 +7,129 @@
         <link rel="stylesheet" href="source/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="source/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="source/font-mfizz/font-mfizz.css">
+        <link rel="stylesheet" href="source/flag-icon/css/flag-icon.css">
+        <link rel="stylesheet" href="source/animate.css/animate.css">
         <link rel="stylesheet" href="source/css/style.css">
         <!-- call javascript file -->
         <script src="source/jquery/jquery.min.js"></script>
         <script src="source/bootstrap/js/bootstrap.min.js"></script>
+        <script src="source/typed.js/typed.min.js"></script>
+        <script src="source/js/cv_js.js"></script>
     </head>
-    <body>
-        <div class="body-center body-margin-top" style="max-width:1400px;">
-            <div class="container-fluid">
-                <div class="row col-padding">
-                    <div class="col-md-4">
-                        <div class="content box-shadow body-margin-bottom">
-                            <div class="relative">
-                                <img src="images/avatar_hat.jpg" alt="avatar" style="width:100%">
-                                <div class="display-buttom-left padding black-text">
-                                    <h2>พัฒนา จิรสุนทรชัย</h2>
-                                </div>
-                            </div>
-                            <div class="col-padding relative">
-                                <p><i class="fa fa-briefcase text-green margin-right size18"></i>นักศึกษา</p>
-                                <p><i class="fa fa-home text-green margin-right size18"></i>231 หนู่ 6 ตำบล บ้านกลาง จังหวัด ลำพูน</p>
-                                <p><i class="fa fa-envelope text-green margin-right size18"></i>mike.pattana@gmail.com</p>
-                                <p><i class="fa fa-phone text-green margin-right size18"></i>0946317363</p>
-                                <p><i class="fa fa-github text-green margin-right size18"></i><a href="https://github.com/MIraK1E" target="blank">MIraK1E</a></p>
-                                <hr>
-                                <b><i class="fa fa-asterisk text-green margin-right size18"></i>ทักษะทางด้านคอมพิวเตอร์</b>
-                                <p>ทักษะระดับเริ่มต้น</p>
-                                <i class="fa fa-html5 text-green size18"></i> HTML5
-                                <i class="fa fa-css3 text-green size18"></i> CSS3
-                                <i class="icon-php text-green size18"></i> PHP
-                                <i class="icon-jquery text-green size18"></i> Jquery
-                                <i class="icon-mysql text-green size18"></i> Mysql
-                                <br>
-                                <i class="icon-bootstrap text-green size18"></i> Bootstrap v.3.3.7
-                                <p>เทคโนโลยีที่กำลังศึกษา</p>
-                                <i class="icon-git text-green size18"></i> Git
-                                <i class="icon-laravel text-green size18"></i> Laravel
-                                <p>เทคโนโลยีที่สนใจ</p>
-                                <i class="icon-angular text-green size18"></i> Angular.js
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="content box-shadow col-padding body-margin-bottom">
-                                    <h3><i class="fa fa-suitcase text-green margin-right margin-left"></i>ประสบการณ์ทำงาน</h3>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="content box-shadow col-padding ">
-                                    555
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <body onload="showPage()">
+        <div id="overlay">
+            <center id="overlay_text">
+                <center><h1><i class="fa fa-refresh fa-spin fa-5x fa-fw"></i></h1>
+                <span><h2 id="loader_text"></h2></span></center>
+            </center>
         </div>
-        <footer class="body-margin-top background-green">
-            <div class="container">
-                <div class="body-center">
-                    <p>555</p>
+        <div id="page_control">
+            <div class="body-center body-margin-top" style="max-width:1400px;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="content box-shadow body-margin-bottom animated fadeInRight" id="proflie">
+                                <div class="relative">
+                                    <img src="images/snoop-.jpg" alt="avatar" style="width:100%">
+                                    <div class="display-buttom-left padding black-text">
+                                        <h2>Pattana Jirasonthonchai</h2>
+                                    </div>
+                                </div>
+                                <div class="margin-left relative col-padding">
+                                    <p><i class="fa fa-birthday-cake text-green margin-right size18"></i>20 Feb 1994 [23 year old]</p>
+                                    <p><i class="fa fa-briefcase text-green margin-right size18"></i>University student</p>
+                                    <p><i class="fa fa-home text-green margin-right size18"></i>231, Moo 6 BaanKlang Sub-district <br>Mueng District Lamphun Province 51000</p>
+                                    <p><i class="fa fa-envelope text-green margin-right size18"></i>mike.pattana@gmail.com</p>
+                                    <p><i class="fa fa-phone text-green margin-right size18"></i>0946317363</p>
+                                    <p><i class="fa fa-github text-green margin-right size18"></i><a href="https://github.com/MIraK1E" target="blank">My GitHub</a></p>
+                                    <hr>
+                                    <b><i class="fa fa-book text-green margin-right size18"></i>Skill</b>
+                                    <p>- Language</p>
+                                    <i class="flag-icon flag-icon-th margin-left"></i> Thai [native],
+                                    <i class="flag-icon flag-icon-jp" style="border: 1px solid black;"></i> Japanese [JLPT N4]
+                                    <p>- Programing-Language</p>
+                                    <i class="icon-html text-green size18 margin-left"></i> HTML
+                                    <i class="icon-css text-green size18"></i> CSS
+                                    <i class="icon-php text-green size18"></i> PHP
+                                    <i class="icon-mysql text-green size18"></i> SQL
+                                    <br>
+                                    <p>- Framwork</p>
+                                     <i class="icon-jquery text-green size18 margin-left"></i> Jquery
+                                     <i class="icon-bootstrap text-green size18"></i> Bootstrap<br>
+                                    <i class="icon-laravel text-green size18 margin-left"></i> Laravel [Leraning in progess]
+                                    <p>- Tools</p>
+                                    <i class="icon-git text-green size18 margin-left"></i> Git
+                                    <i class="icon-mysql text-green size18"></i> MySQL
+                                    <p>- Interseting Technology</p>
+                                    <i class="icon-angular-alt text-green size18 margin-left"></i> Angular
+                                    <i class="icon-mongodb text-green size18"></i> MongoDB
+                                    <i class="icon-nodejs text-green size18"></i> NodeJS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="content box-shadow col-padding body-margin-bottom animated fadeInDown">
+                                        <div class="margin-left relative">
+                                            <h3><i class="fa fa-suitcase text-green margin-right"></i>Work Expirence</h3>
+                                            <h4 style="padding:8 0 8 0px;">PHP BackEnd-Developer SIPA [Internship]</h4>
+                                            <h5><i class="fa fa-calendar fa-fw margin-right text-green"></i>Jan 2017 - Apr 2017</h5>
+                                            <p>Use PHP, MySQL to develop a Hotel Booking Web Application as back-end developer</p>
+                                            <hr>
+                                            <h4 style="padding:8 0 8 0px;">Web Application for Royal Irrigation Department [Font-End]</h4>
+                                            <h5><i class="fa fa-calendar fa-fw margin-right text-green"></i>May 2017 - Aug 2017</h5>
+                                            <p>Develop a web application for tracking RID policy by Google Maps API, PHP, Jquery</p>
+                                            <i class="fa fa-link text-green margin-right" style="font-size:14px;"></i><a href="http://146.88.37.41:11380/map2/" target="blank">http://146.88.37.41:11380/map2/</a>
+                                            <div class="invisiblity-group" data-toggle="modal" data-target="#RID_Descript"><i class="fa fa-picture-o text-green margin-right" style="font-size:14px;"></i>example</div>
+                                            <hr>
+                                            <h4 style="padding:8 0 8 0px;">Web Application for Taantawaan Dormitory [Thesis]</h4>
+                                            <h5><i class="fa fa-calendar fa-fw margin-right text-green"></i>Sep 2017 - Dec 2017</h5>
+                                            <i class="fa fa-link text-green margin-right" style="font-size:12px;"></i><a href="http://146.88.37.41:11380/map2/" target="blank">http://146.88.37.41:11380/map2/</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="content box-shadow col-padding body-margin-bottom animated fadeInUp">
+                                        <div class="margin-left relative">
+                                            <h3><i class="fa fa-graduation-cap text-green margin-right"></i>Education</h3>
+                                            <h4 style="padding:8 0 8 0px;">Tayama Ngo Jissen School</h4>
+                                            <h5><i class="fa fa-calendar fa-fw margin-right text-green"></i>Jan 2015 - 2016</span></h5>
+                                            <hr>
+                                            <h4 style="padding:8 0 8 0px;">Bachelor of Sience, Information and Technology [Rajabhat Chiangmai University]</h4>
+                                            <h5><i class="fa fa-calendar fa-fw margin-right text-green"></i>Jan 2013 - <span class="badge background-green">Current</span></h5>
+                                            <p>GPA : 3.14</p>
+                                            <hr>
+                                            <h4 style="padding:8 0 8 0px;">France & Japanese Program [Chakkham Khanathon School]</h4>
+                                            <h5><i class="fa fa-calendar fa-fw margin-right text-green"></i> 2009 - 2011 </h5>
+                                            <p>GPA : 2.74</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </footer>
+            <footer class="body-margin-top background-green animated fadeIn">
+                <div class="container">
+                    <center><p>This site inspired by <a style="color:white;" target="blank" href="https://www.w3schools.com/w3css/tryw3css_templates_cv.htm">w3school.com</a><br>Created by <i class="icon-bootstrap"></i> bootstrap and <i class="icon-jquery"></i> jquery  </p></center>
+                </div>
+            </footer>
+            <div class="modal fade" role="dialog" id="RID_Descript">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <div class="content">
+                                <h3>RID Web Application Example</h3>
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
     </body>
 </html>
